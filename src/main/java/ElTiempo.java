@@ -9,9 +9,9 @@ import java.io.IOException;
 public class ElTiempo {
     public static void main(String[] args) throws IOException {
         Document doc = Jsoup.connect("https://weather.com/es-ES/tiempo/hoy/l/SPXX0084:1:SP").userAgent("Mozilla").get();
-             Elements miElemento=doc.getElementsByClass("today_nowcar-temp");
+             Elements miElemento=doc.getElementsByClass("today_nowcard-temp");
              String miTexto=miElemento.text();
-             Elements Elemento=doc.getElementsByClass("today_nowcar-phrase");
+             Elements Elemento=doc.getElementsByClass("today_nowcard-phrase");
              String  Texto=Elemento.text();
 
         System.out.println(miTexto);
